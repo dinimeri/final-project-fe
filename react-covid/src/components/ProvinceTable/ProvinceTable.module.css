@@ -1,0 +1,18 @@
+/* Small Screen */
+.table__data {
+  border: 1px solid #64748B;
+  border-collapse: collapse;
+}
+
+.table__data {
+  padding: 5px;
+  font-size: 12px;
+  color: #64748B;
+}
+
+/* Medium Screen */
+@media(min-width: 768px) {
+  .table__data {
+    font-size: 16px;
+  }
+}
