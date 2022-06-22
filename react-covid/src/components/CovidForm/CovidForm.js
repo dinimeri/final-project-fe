@@ -81,25 +81,25 @@ function CovidForm() {
   const submitProvince = () => {
     if (status === "positif") {
       const province = provinces.map(
-        province => province.kota === city ? {...province, kasus: Number(total) } : province
+        province => province.kota === city ? {...province, kasus: parseInt(province.kasus)+parseInt(total) } : province
       );
       dispatch(updateProvinces(province));
     }
     if (status === "sembuh") {
       const province = provinces.map(
-        province => province.kota === city ? {...province, sembuh: Number(total) } : province
+        province => province.kota === city ? {...province, sembuh: parseInt(province.sembuh)+parseInt(total) } : province
       );
       dispatch(updateProvinces(province));
     }
     if (status === "dirawat") {
       const province = provinces.map(
-        province => province.kota === city ? {...province, dirawat: Number(total) } : province
+        province => province.kota === city ? {...province, dirawat: parseInt(province.dirawat)+parseInt(total) } : province
       );
       dispatch(updateProvinces(province));
     }
     if (status === "meninggal") {
       const province = provinces.map(
-        province => province.kota === city ? {...province, meninggal: Number(total) } : province
+        province => province.kota === city ? {...province, meninggal: parseInt(province.meninggal)+parseInt(total) } : province
       );
       dispatch(updateProvinces(province));
     }
