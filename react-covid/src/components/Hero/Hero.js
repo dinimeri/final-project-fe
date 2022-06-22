@@ -1,20 +1,25 @@
-import styles from "./Hero.module.css";
+import heroimage from "../../assets/images/undraw_medical_research_qg4d.png";
+import Button from "../ui/Button";
+import Heading from "../ui/Heading";
+import Paragraph from "../ui/Paragraph";
+import Image from "../ui/Image";
+import StyledHero from "./Hero.styled";
 
 function Hero() {
   return (
-    <div className={styles.container}>
-      <section className={styles.hero}>
-        <div className={styles.hero__left}>
-          <h1 className={styles.hero__title}>Covid ID</h1>
-          <h4 className={styles.hero__subtitle}>Monitoring Perkembangan Covid</h4>
-          <p className={styles.hero__description}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem suscipit ea expedita a odit dolore iste mollitia nulla nostrum laborum?</p>
-          <button className={styles.hero__button}>Vaccine</button>
+    <>
+      <StyledHero>
+        <div className="hero__left">
+          <Heading>Covid ID</Heading>
+          <Heading as="h4" size="sm" variant="secondary">Monitoring Perkembangan Covid</Heading>
+          <Paragraph>Website monitoring perkembangan Covid-19 di Indonesia dan Global</Paragraph>
+          <Button as="a" href="https://vaksin.kemkes.go.id/#/vaccines" target="_blank">Vaccine</Button>
         </div>
-        <div className={styles.hero__right}>
-          <img className={styles.hero__image} src={require("../../assets/images/undraw_medical_research_qg4d.png")} alt="placeholder" />
+        <div className="hero__right">
+          <Image src={heroimage} alt="medical research illustration" />
         </div>
-      </section>
-    </div>
+      </StyledHero>
+    </>
   );
 }
 

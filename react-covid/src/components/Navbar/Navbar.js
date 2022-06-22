@@ -1,5 +1,7 @@
 import { useState } from "react";
-import styles from "./Navbar.module.css";
+import { Link } from "react-router-dom";
+import Heading from "../ui/Heading";
+import StyledNavbar from "./Navbar.styled";
 
 function Navbar() {
   const [ isMenuClicked, setIsMenuClicked ] = useState(false);
@@ -13,24 +15,34 @@ function Navbar() {
     }
   }
   return (
-    <div className={styles.container}>
-      <nav className={styles.navbar}>
-        <div>
-          <h1 className={styles.navbar__brand}>Covid ID</h1>
-        </div>
-        <div>
-          <ul className={isMenuClicked ? `${styles.navbar__listActive}` : `${styles.navbar__list}`}>
-            <li className={styles.navbar__item}>Home</li>
-            <li className={styles.navbar__item}>Indonesia</li>
-            <li className={styles.navbar__item}>Provinsi</li>
-            <li className={styles.navbar__item}>About</li>
-          </ul>
-        <div className={styles.navbar__menu} onClick={handleClick}>
-          <i className={isMenuClicked ? "fa-solid fa-xmark" : "fa-solid fa-bars"}></i>
-        </div>
-        </div>
-      </nav>
-    </div>
+    <>
+      <header>
+        <StyledNavbar>
+          <div>
+            <Heading size="lg" variant="light">Covid ID</Heading>
+          </div>
+          <div>
+            <ul className={isMenuClicked ? "navbar__listActive" : "navbar__list"}>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/indonesia">Indonesia</Link>
+              </li>
+              <li>
+                <Link to="/provinsi">Provinsi</Link>
+              </li>
+              <li>
+                <Link to="#">About</Link>
+              </li>
+            </ul>
+          <button onClick={handleClick}>
+            <i className={isMenuClicked ? "fa-solid fa-xmark" : "fa-solid fa-bars"}></i>
+          </button>
+          </div>
+        </StyledNavbar>
+      </header>
+    </>
   );
 }
 
