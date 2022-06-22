@@ -1,4 +1,3 @@
-// Import Component
 import Hero from "../components/Hero/Hero";
 import CovidCase from "../components/CovidCase/CovidCase";
 import Summary from "../components/Summary/Summary";

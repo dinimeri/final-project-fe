@@ -1,4 +1,3 @@
-// Import useState
 import { useState } from "react";
 import Alert from "../Alert/Alert";
 import formImage from "../../assets/images/undraw_Forming_ideas_re_2afc.png"

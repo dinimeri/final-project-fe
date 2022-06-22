@@ -7,8 +7,6 @@ import StyledProvinceTable from "./ProvinceTable.styled";
 
 
 function ProvinceTable() {
-  // const { provinces } = props;
-
   const provinces = useSelector((store) => store.provinces.provinces)
 
   return(
