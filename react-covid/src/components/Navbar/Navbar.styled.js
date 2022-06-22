@@ -17,6 +17,10 @@ const StyledNavbar = styled.nav`
     background: none;
     color: #fff;
   }
+  
+  button {
+    color: #18A2F2;
+  }
 
   .navbar__list {
     display: none;
@@ -46,7 +50,7 @@ const StyledNavbar = styled.nav`
   }
 
   li a:hover {
-    color: #1C3041;
+    color: #18A2F2;
   }
 
   /* Medium Screen */
