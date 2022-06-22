@@ -8,6 +8,9 @@ const Button = styled.button`
   background-color: #18F2B2;
   cursor: pointer;
   font-size: 18px;
+  :hover {
+    background-color: #18A2F2;
+  }
 
   ${(props) => props.full && css`
     display: block;
