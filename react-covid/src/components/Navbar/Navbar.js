@@ -33,7 +33,7 @@ function Navbar() {
                 <Link to="/provinsi">Provinsi</Link>
               </li>
               <li>
-                <Link to="#">About</Link>
+                <Link to="https://www.linkedin.com/in/dinimeri/">About</Link>
               </li>
             </ul>
           <button onClick={handleClick}>
